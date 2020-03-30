@@ -71,12 +71,12 @@
           <legend class="assortment-program__legend legend legend_line">Контактные данные (владельца кота)</legend>
           <label class="assortment-program__label">
             E-mail:*
-            <input class="assortment-program__input-e-mail" name="e-mail" type="email" placeholder="kuklachev@gmail.com" pattern=".+@.+..+" required="required">
+            <input class="assortment-program__input-e-mail" name="e-mail" type="email" placeholder="kuklachev@gmail.com" required="required">
             <img class="assortment-program__icon icon icon_e-mail" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка e-mail">
           </label>
           <label class="assortment-program__label">
             Телефон:*
-            <input class="assortment-program__input-tel" name="tel" type="tel" placeholder="8 (960) 900-60-90" pattern="(?:+|d)[d-() ]{9,}d" required="required">
+            <input class="assortment-program__input-tel" name="tel" type="tel" placeholder="8 (960) 900-60-90" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="required">
             <img class="assortment-program__icon icon icon_tel" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка телефона">
           </label>
         </fieldset>
