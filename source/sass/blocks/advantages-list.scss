@@ -1,0 +1,15 @@
+.advantages-list__wrap-img {
+  background-color: $green;
+  margin-right: 20px;
+}
+
+.advantages-list__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.advantages-list__text {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}

@@ -1,0 +1,33 @@
+.menu-list__item {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.menu-list__link {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black111;
+  font-weight: 500;
+  position: relative;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &_active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 2px;
+    background-color: $green;
+  }
+}
