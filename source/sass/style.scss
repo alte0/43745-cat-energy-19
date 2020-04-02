@@ -1,6 +1,7 @@
 @import "fonts";
 @import "../../node_modules/normalize.css/normalize";
-@import "vars.scss";
+@import "vars";
+@import "mixin";
 @import "common";
 @import "blocks/visually-hidden";
 @import "blocks/header";

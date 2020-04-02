@@ -1,5 +1,5 @@
 .footer {
-  background-color: $gray-f2;
+  background-color: $gray;
   padding: 39px 20px 22px 20px;
   text-align: center;
 }
@@ -18,14 +18,13 @@
   padding: 22px 0 21px;
   margin: 31px 0 22px;
   list-style-type: none;
-  border-top: 1px solid $gray-decor-social;
-  border-bottom: 1px solid $gray-decor-social;
+  border-top: 1px solid $gray-200;
+  border-bottom: 1px solid $gray-200;
 }
 
 .footer__link-to-htmlacademy {
   color: $black444;
   font-size: 16px;
-  font-family: "Arial", sans-serif;
   line-height: 16px;
 
   &:active {

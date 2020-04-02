@@ -12,31 +12,31 @@
 
   &:hover,
   &:active {
-    background-color: $green-btn-h-a;
+    background-color: $green-dark;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-}
 
-.btn_theme-catalog {
-  font-size: 16px;
-  line-height: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.btn_theme-gray {
-  background-color: $gray-f2;
-  color: $black444;
-
-  &:hover,
-  &:active {
-    background-color: #ebebeb;
+  &_theme-catalog {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
+  &_theme-gray {
+    background-color: $gray;
+    color: $black444;
+
+    &:hover,
+    &:active {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
