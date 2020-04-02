@@ -1,0 +1,7 @@
+.categories {
+  padding: 11px 20px;
+}
+
+.categories__list {
+  @include clean-ul;
+}

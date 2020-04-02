@@ -1,0 +1,8 @@
+.living-example {
+  background-color: $gray;
+  padding: 23px 20px;
+}
+
+.living-example__list {
+  @include clean-ul;
+}

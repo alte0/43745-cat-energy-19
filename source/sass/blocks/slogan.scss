@@ -1,0 +1,44 @@
+.slogan {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #ffffff;
+  padding: 11px 20px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 305px;
+    background-color: #63a73a;
+    background-image: linear-gradient(to right, #65a93c, #63a73a);
+    z-index: -1;
+  }
+}
+
+.slogan__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 27px;
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+.slogan__desc {
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 0;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+.slogan__img {
+  margin-bottom: 5px;
+  vertical-align: top;
+}

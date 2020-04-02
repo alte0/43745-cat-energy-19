@@ -1,0 +1,59 @@
+.field-data {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.field-data__span {
+  color: $black222;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  margin-right: 16px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.field-data__input {
+  color: $black444;
+  border: 1px solid $gray-100;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  min-width: 130px;
+  width: 100%;
+  text-transform: uppercase;
+
+  &::placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &:hover {
+    border-color: $gray-300;
+  }
+
+  &:focus,
+  &:focus:invalid {
+    border-width: 2px;
+  }
+
+  &:focus {
+    border-color: $black444;
+  }
+
+  &:focus:invalid {
+    border-color: #ff8282;
+  }
+
+  &:invalid {
+    outline: none;
+  }
+}
+
+.field-data__icon-email,
+.field-data__icon-tel {
+  position: absolute;
+  right: 0;
+}

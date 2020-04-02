@@ -1,0 +1,11 @@
+.catalog {
+  padding-top: 20px;
+}
+
+.catalog__title {
+  padding-left: 20px;
+}
+
+.catalog__list {
+  @include clean-ul;
+}

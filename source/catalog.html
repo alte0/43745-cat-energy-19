@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cat energy - Каталог продукции</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,7 +27,7 @@
           <a class="menu-list__link" href="index.html">Главная</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+          <a class="menu-list__link menu-list__link_active" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="menu-list__item">
           <a class="menu-list__link" href="form.html">Подбор программы</a>
@@ -33,7 +38,7 @@
   <main class="main">
     <h1 class="visually-hidden">Кэт энерджи - Каталог продукции фитнес еды для котиков</h1>
     <section class="catalog">
-      <h2 class="title">Каталог продукции</h2>
+      <h2 class="title catalog__title">Каталог продукции</h2>
       <ul class="product-list catalog__list">
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -57,7 +62,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -81,7 +86,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -105,7 +110,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -129,7 +134,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -153,7 +158,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -177,7 +182,7 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link-img" href="product.html">
@@ -201,12 +206,12 @@
               </tr>
             </table>
           </div>
-          <a class="product-list__btn btn" href="order-product.html">Заказать</a>
+          <a class="product-list__btn btn btn_theme-catalog" href="order-product.html">Заказать</a>
         </li>
         <li class="show-more-products product-list__item">
           <p class="show-more-products__big-text">Показать еще 100500 товаров</p>
           <p class="show-more-products__text">На самом деле вкусов гораздо больше!</p>
-          <a class="show-more-products__btn btn btn_theme-gray" href="new-products.html">Показать всё</a>
+          <a class="show-more-products__btn btn btn_theme-gray btn_theme-catalog" href="new-products.html">Показать всё</a>
         </li>
       </ul>
     </section>
@@ -214,7 +219,7 @@
     <section class="additional-items">
       <h3 class="title title_line">Дополнительные товары</h3>
       <ul class="product-list additional-items__list">
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item_additional">
           <a class="product-list__title" href="product.html">Сахарозаменитель</a>
           <div class="product-list__wrap-characteristic">
             <span class="product-list__characteristic-text">1 упаковка (100 г)</span>
@@ -222,7 +227,7 @@
           </div>
           <a class="product-list__btn btn" href="order-product.html">Заказать</a>
         </li>
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item_additional">
           <a class="product-list__title" href="product.html">Питьевая вода</a>
           <div class="product-list__wrap-characteristic">
             <span class="product-list__characteristic-text">5 литров</span>
@@ -230,7 +235,7 @@
           </div>
           <a class="product-list__btn btn" href="order-product.html">Заказать</a>
         </li>
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item_additional">
           <a class="product-list__title" href="product.html">Молоко</a>
           <div class="product-list__wrap-characteristic">
             <span class="product-list__characteristic-text">1 литр</span>
@@ -238,7 +243,7 @@
           </div>
           <a class="product-list__btn btn" href="order-product.html">Заказать</a>
         </li>
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item_additional">
           <a class="product-list__title" href="product.html">Витамины</a>
           <div class="product-list__wrap-characteristic">
             <span class="product-list__characteristic-text">1 упаковка (30 г)</span>
@@ -253,10 +258,14 @@
       </div>
     </section>
     <!-- end additional-items -->
-    <div class="contacts">
-      <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <div class="contacts__map"></div>
+    <div class="contacts contacts_bg-gray">
+      <div class="contacts__wrap-text">
+        <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <div class="contacts__map">
+        <img class="contacts__img" src="https://via.placeholder.com/320x400" width="320" height="400" alt="Адрес на карте">
+      </div>
     </div>
   </main>
   <footer class="footer">

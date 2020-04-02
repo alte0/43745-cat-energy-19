@@ -1,0 +1,18 @@
+.header {
+  padding: 11px 20px 16px 20px;
+  border-bottom: 1px solid $gray-100;
+}
+
+.header__link-to-home {
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+.header__list-menu {
+  @include clean-ul;
+}

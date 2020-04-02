@@ -1,0 +1,28 @@
+.additional-items {
+  padding: 11px 20px 35px;
+}
+
+.additional-items__list {
+  @include clean-ul;
+  margin-bottom: 36px;
+}
+
+.additional-items__order-all {
+  background-color: $green;
+  text-align: center;
+  padding: 65px 56px 40px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.additional-items__gift {
+  margin-bottom: 60px;
+}
+
+.additional-items__desc-order {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}

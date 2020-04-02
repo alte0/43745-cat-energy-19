@@ -1,0 +1,8 @@
+.advantages {
+  padding: 11px 20px;
+}
+
+.advantages__list {
+  @include clean-ul;
+  margin-bottom: 31px;
+}
