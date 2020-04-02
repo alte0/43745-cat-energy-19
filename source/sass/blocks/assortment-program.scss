@@ -1,0 +1,56 @@
+.assortment-program {
+  padding: 23px 20px 34px;
+}
+
+.assortment-program__desc {
+  font-family: "Oswald", "Arial", sans-serif;
+  margin-top: 0;
+  margin-bottom: 37px;
+  text-transform: uppercase;
+}
+
+.assortment-program__fieldset {
+  border: none;
+  padding: 9px 0;
+  position: relative;
+
+  &_border {
+    position: relative;
+    border: 1px solid $gray-150;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.assortment-program__label {
+  margin-bottom: 14px;
+}
+
+.assortment-program__textarea {
+  border: 1px solid $gray-300;
+  box-sizing: border-box;
+  padding: 14px 11px;
+  resize: none;
+  min-height: 150px;
+  width: 100%;
+
+  &::placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: 16px;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.assortment-program__submit {
+  border: none;
+  margin-bottom: 23px;
+}
+
+.assortment-program__footnote {
+  line-height: 16px;
+  margin: 0;
+  text-align: center;
+}

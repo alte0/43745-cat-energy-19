@@ -58,13 +58,13 @@
           </label>
         </fieldset>
         <!-- end Данные кота -->
-        <fieldset class="assortment-program__fieldset">
+        <fieldset class="assortment-program__fieldset assortment-program__fieldset_border">
           <legend class="assortment-program__legend visually-hidden">Выбор программы</legend>
-          <input class="select-input" id="program1" name="program" type="radio" value="program1" checked="checked">
+          <input class="select-input visually-hidden" id="program1" name="program" type="radio" value="program1" checked="checked">
           <label class="label" for="program1">Похудение</label>
-          <input class="select-input" id="program2" name="program" type="radio" value="program2">
+          <input class="select-input visually-hidden" id="program2" name="program" type="radio" value="program2">
           <label class="label" for="program2">Набор массы</label>
-          <input class="select-input" id="program3" name="program" type="radio" value="program3">
+          <input class="select-input visually-hidden" id="program3" name="program" type="radio" value="program3">
           <label class="label" for="program3">Не знаю (Нужен ваш совет)</label>
         </fieldset>
         <!-- end Выбор программы -->
@@ -89,13 +89,13 @@
         <!-- end Комментарий -->
         <fieldset class="assortment-program__fieldset">
           <h3 class="title title_line">Дополнительно</h3>
-          <input class="select-input" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
+          <input class="select-input visually-hidden" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
           <label class="label label_checkbox" for="additionally1">Сахарозаменитель</label>
-          <input class="select-input" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
+          <input class="select-input visually-hidden" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
           <label class="label label_checkbox" for="additionally2">Питьевая вода</label>
-          <input class="select-input" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
+          <input class="select-input visually-hidden" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
           <label class="label label_checkbox" for="additionally3">Молоко</label>
-          <input class="select-input" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
+          <input class="select-input visually-hidden" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
           <label class="label label_checkbox" for="additionally4">Витамины</label>
         </fieldset>
         <!-- end Дополнительно -->
@@ -104,10 +104,14 @@
       </form>
     </section>
     <!-- end assortment-program -->
-    <div class="contacts">
-      <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <div class="contacts__map"></div>
+    <div class="contacts contacts_bg-gray">
+      <div class="contacts__wrap-text">
+        <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <div class="contacts__map">
+        <img class="contacts__img" src="https://via.placeholder.com/320x400" width="320" height="400" alt="Адрес на карте">
+      </div>
     </div>
   </main>
   <footer class="footer">

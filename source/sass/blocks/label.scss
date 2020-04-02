@@ -1,0 +1,18 @@
+.label {
+  display: inline-flex;
+  color: $black222;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 18px;
+  padding-left: 46px;
+  width: 100%;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
