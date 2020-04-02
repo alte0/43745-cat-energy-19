@@ -13,10 +13,8 @@
   }
 }
 
-.product-list__item_additional {
-  & .product-list__title {
-    margin-bottom: 15px;
-  }
+.product-list__item_additional .product-list__title {
+  margin-bottom: 15px;
 }
 
 .product-list__wrap-characteristic {
