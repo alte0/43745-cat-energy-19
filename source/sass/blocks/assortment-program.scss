@@ -3,6 +3,7 @@
 }
 
 .assortment-program__desc {
+  color: $black111;
   font-family: "Oswald", "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 37px;
@@ -12,7 +13,9 @@
 .assortment-program__fieldset {
   border: none;
   padding: 9px 0;
+  margin: 0;
   position: relative;
+  box-sizing: border-box;
 
   &_border {
     position: relative;

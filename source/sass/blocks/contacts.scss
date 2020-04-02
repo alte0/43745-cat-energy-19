@@ -11,6 +11,7 @@
 }
 
 .contacts__welcome {
+  color: $black111;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -20,6 +21,8 @@
 }
 
 .contacts__address {
+  color: $black444;
+  font-style: normal;
   line-height: 20px;
   width: 50%;
 }

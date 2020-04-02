@@ -14,13 +14,18 @@
 }
 
 .product-list__item_additional .product-list__title {
-  margin-bottom: 15px;
+  color: $black222;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 14px;
 }
 
 .product-list__wrap-characteristic {
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-list__characteristic-value_text-uppercase {

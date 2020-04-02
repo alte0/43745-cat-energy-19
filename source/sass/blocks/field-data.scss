@@ -8,9 +8,9 @@
   color: $black222;
   font-size: 16px;
   font-family: "Oswald", "Arial", sans-serif;
-  line-height: 18px;
   margin-right: 16px;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .field-data__input {
@@ -19,13 +19,15 @@
   padding: 14px 16px;
   font-size: 16px;
   font-family: "Oswald", "Arial", sans-serif;
-  flex-grow: 1;
-  line-height: 18px;
+  min-width: 130px;
+  width: 100%;
   text-transform: uppercase;
 
   &::placeholder {
     opacity: 1;
     color: $black444;
+    font-size: inherit;
+    line-height: inherit;
   }
 
   &:hover {

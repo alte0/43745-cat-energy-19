@@ -4,6 +4,7 @@
 
 .additional-items__list {
   @include clean-ul;
+  margin-bottom: 36px;
 }
 
 .additional-items__order-all {
