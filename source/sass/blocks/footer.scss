@@ -1,6 +1,6 @@
 .footer {
   background-color: $gray;
-  padding: 39px 20px 22px 20px;
+  padding: 39px 0 22px;
   text-align: center;
 }
 
@@ -29,5 +29,13 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

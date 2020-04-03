@@ -1,9 +1,6 @@
 .slogan {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
   color: #ffffff;
-  padding: 11px 20px;
+  padding: 11px 0;
   position: relative;
   text-align: center;
 
@@ -15,7 +12,9 @@
     right: 0;
     height: 305px;
     background-color: #63a73a;
-    background-image: linear-gradient(to right, #65a93c, #63a73a);
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
     z-index: -1;
   }
 }
@@ -41,4 +40,43 @@
 .slogan__img {
   margin-bottom: 5px;
   vertical-align: top;
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    text-align: left;
+  }
+
+  .slogan__wrap {
+    padding-left: 90px;
+    padding-right: 192px;
+    position: relative;
+    min-height: 400px;
+    z-index: 0;
+  }
+
+  .slogan__btn {
+    display: block;
+  }
+
+  .slogan__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1300px) {
+  .slogan__wrap {
+    padding-left: 82px;
+    padding-right: 0;
+    width: 528px;
+  }
+
+  .slogan__img {
+    left: 100%;
+    top: 50%;
+    transform: translate(0, -70%);
+  }
 }

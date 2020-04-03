@@ -1,5 +1,5 @@
 .header {
-  padding: 11px 20px 16px 20px;
+  padding: 11px 0 16px;
   border-bottom: 1px solid $gray-100;
 }
 
@@ -15,4 +15,31 @@
 
 .header__list-menu {
   @include clean-ul;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__toggle-menu {
+    display: none;
+  }
+
+  .header__nav {
+    width: 516px;
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 77px;
+  }
+
+  .menu-list__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
