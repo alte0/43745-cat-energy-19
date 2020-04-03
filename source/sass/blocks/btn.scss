@@ -3,12 +3,12 @@
   color: #ffffff;
   display: inline-block;
   font-family: "Oswald", "Arial", sans-serif;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding: 11px 29px 11px 26px;
   vertical-align: top;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
 
   &:hover,
   &:active {
@@ -38,5 +38,11 @@
     &:active {
       color: rgba(68, 68, 68, 0.3);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
   }
 }

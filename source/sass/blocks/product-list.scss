@@ -67,3 +67,10 @@
 .product-list__td-value {
   text-align: right;
 }
+
+
+@media (min-width: 768px) {
+  .product-list__btn {
+    width: 100%;
+  }
+}

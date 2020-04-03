@@ -31,3 +31,16 @@
     background-color: $green;
   }
 }
+
+@media (min-width: 768px) {
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 77px;
+  }
+
+  .menu-list__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
