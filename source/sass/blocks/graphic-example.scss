@@ -1,3 +1,13 @@
+.graphic-example__wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.graphic-example__bar {
+  width: 50px;
+  background-color: #ffffff;
+}
+
 .graphic-example__btn {
   border: none;
   color: $black111;

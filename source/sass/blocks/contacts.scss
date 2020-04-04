@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+
   &_bg-gray {
     background-color: $gray;
   }
@@ -7,7 +9,7 @@
 .contacts__wrap-text {
   display: flex;
   flex-wrap: wrap;
-  padding: 29px 20px 24px 20px;
+  padding: 29px 0 24px;
 }
 
 .contacts__welcome {
@@ -25,4 +27,47 @@
   font-style: normal;
   line-height: 20px;
   width: 50%;
+}
+
+.contacts__map {
+  text-align: center;
+}
+
+.contacts__img {
+  vertical-align: top;
+}
+
+@media (min-width: 768px) {
+  .contacts__wrap-text {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .contacts__welcome,
+  .contacts__address {
+    width: 160px;
+  }
+
+  .contacts__address {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1300px) {
+  .contacts__container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .contacts__wrap-text {
+    background-color: #ffffff;
+    padding: 65px 85px 60px 75px;
+    width: 570px;
+    width: 410px;
+  }
 }

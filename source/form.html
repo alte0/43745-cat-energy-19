@@ -39,77 +39,89 @@
     </div>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Кэт энерджи - Каталог продукции фитнес еды для котиков</h1>
-    <section class="assortment-program">
-      <form class="assortment-program__form" action="https://echo.htmlacademy.ru/" method="POST">
-        <h2 class="title">Подбор программы</h2>
-        <p class="assortment-program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="assortment-program__fieldset">
-          <legend class="assortment-program__legend visually-hidden">Данные кота</legend>
-          <label class="field-data assortment-program__label">
-            <span class="field-data__span">Имя:*</span>
-            <input class="field-data__input" name="name-cat" type="text" placeholder="Барсик" required="required">
-          </label>
-          <label class="field-data assortment-program__label">
-            <span class="field-data__span">Вес (кг):*</span>
-            <input class="field-data__input" name="name-weight" type="text" placeholder="7" pattern="^[0-9]+$" required="required">
-          </label>
-          <label class="field-data assortment-program__label">
-            <span class="field-data__span">Возраст (лет):</span>
-            <input class="field-data__input" name="name-year" placeholder="7" type="text" pattern="^[0-9]+$">
-          </label>
-        </fieldset>
-        <!-- end Данные кота -->
-        <fieldset class="assortment-program__fieldset assortment-program__fieldset_border">
-          <legend class="assortment-program__legend visually-hidden">Выбор программы</legend>
-          <input class="select-input visually-hidden" id="program1" name="program" type="radio" value="program1" checked="checked">
-          <label class="label" for="program1">Похудение</label>
-          <input class="select-input visually-hidden" id="program2" name="program" type="radio" value="program2">
-          <label class="label" for="program2">Набор массы</label>
-          <input class="select-input visually-hidden" id="program3" name="program" type="radio" value="program3">
-          <label class="label" for="program3">Не знаю (Нужен ваш совет)</label>
-        </fieldset>
-        <!-- end Выбор программы -->
-        <fieldset class="assortment-program__fieldset">
-          <h3 class="title title_line">Контактные данные (владельца кота)</h3>
-          <label class="field-data assortment-program__label">
-            <span class="field-data__span">E-mail:*</span>
-            <input class="field-data__input" name="email" type="email" placeholder="kuklachev@gmail.com" required="required">
-            <img class="field-data__icon-email" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка email">
-          </label>
-          <label class="field-data assortment-program__label">
-            <span class="field-data__span">Телефон:*</span>
-            <input class="field-data__input" name="tel" type="tel" placeholder="8 (960) 900-60-90" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="required">
-            <img class="field-data__icon-tel" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка телефона">
-          </label>
-        </fieldset>
-        <!-- end Контактные данны -->
-        <fieldset class="assortment-program__fieldset">
-          <h3 class="title title_line">Комментарий</h3>
-          <textarea class="assortment-program__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
-        <!-- end Комментарий -->
-        <fieldset class="assortment-program__fieldset">
-          <h3 class="title title_line">Дополнительно</h3>
-          <input class="select-input visually-hidden" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
-          <label class="label label_checkbox" for="additionally1">Сахарозаменитель</label>
-          <input class="select-input visually-hidden" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
-          <label class="label label_checkbox" for="additionally2">Питьевая вода</label>
-          <input class="select-input visually-hidden" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
-          <label class="label label_checkbox" for="additionally3">Молоко</label>
-          <input class="select-input visually-hidden" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
-          <label class="label label_checkbox" for="additionally4">Витамины</label>
-        </fieldset>
-        <!-- end Дополнительно -->
-        <button class="assortment-program__submit btn" type="submit">Отправить заявку</button>
-        <p class="assortment-program__footnote">* — Обязательные поля</p>
-      </form>
-    </section>
+    <div class="container">
+      <h1 class="visually-hidden">Кэт энерджи - Каталог продукции фитнес еды для котиков</h1>
+      <section class="assortment-program">
+        <form class="assortment-program__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <h2 class="title">Подбор программы</h2>
+          <p class="assortment-program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
+          <div class="assortment-program__col-2-1300">
+            <fieldset class="assortment-program__fieldset">
+              <legend class="assortment-program__legend visually-hidden">Данные кота</legend>
+              <label class="field-data assortment-program__label">
+                <span class="field-data__span">Имя:*</span>
+                <input class="field-data__input" name="name-cat" type="text" placeholder="Барсик" required="required">
+              </label>
+              <label class="field-data assortment-program__label">
+                <span class="field-data__span">Вес (кг):*</span>
+                <input class="field-data__input" name="name-weight" type="text" placeholder="7" pattern="^[0-9]+$" required="required">
+              </label>
+              <label class="field-data assortment-program__label">
+                <span class="field-data__span">Возраст (лет):</span>
+                <input class="field-data__input" name="name-year" placeholder="7" type="text" pattern="^[0-9]+$">
+              </label>
+            </fieldset>
+            <!-- end Данные кота -->
+            <fieldset class="assortment-program__fieldset assortment-program__fieldset_border">
+              <legend class="assortment-program__legend visually-hidden">Выбор программы</legend>
+              <input class="select-input visually-hidden" id="program1" name="program" type="radio" value="program1" checked="checked">
+              <label class="label" for="program1">Похудение</label>
+              <input class="select-input visually-hidden" id="program2" name="program" type="radio" value="program2">
+              <label class="label" for="program2">Набор массы</label>
+              <input class="select-input visually-hidden" id="program3" name="program" type="radio" value="program3">
+              <label class="label" for="program3">Не знаю (Нужен ваш совет)</label>
+            </fieldset>
+            <!-- end Выбор программы -->
+          </div>
+          <fieldset class="assortment-program__fieldset">
+            <h3 class="title title_line">Контактные данные (владельца кота)</h3>
+            <div class="assortment-program__col-2-1300">
+              <label class="field-data assortment-program__label">
+                <span class="field-data__span">E-mail:*</span>
+                <input class="field-data__input" name="email" type="email" placeholder="kuklachev@gmail.com" required="required">
+                <img class="field-data__icon-email" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка email">
+              </label>
+              <label class="field-data assortment-program__label">
+                <span class="field-data__span">Телефон:*</span>
+                <input class="field-data__input" name="tel" type="tel" placeholder="8 (960) 900-60-90" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="required">
+                <img class="field-data__icon-tel" src="https://via.placeholder.com/20x20" width="20" height="20" alt="Иконка телефона">
+              </label>
+            </div>
+          </fieldset>
+          <!-- end Контактные данны -->
+          <fieldset class="assortment-program__fieldset">
+            <h3 class="title title_line">Комментарий</h3>
+            <textarea class="assortment-program__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <!-- end Комментарий -->
+          <fieldset class="assortment-program__fieldset ">
+            <h3 class="title title_line">Дополнительно</h3>
+            <div class="assortment-program__wrap-checkbox">
+              <input class="select-input visually-hidden" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
+              <label class="label label_checkbox" for="additionally1">Сахарозаменитель</label>
+              <input class="select-input visually-hidden" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
+              <label class="label label_checkbox" for="additionally2">Питьевая вода</label>
+              <input class="select-input visually-hidden" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
+              <label class="label label_checkbox" for="additionally3">Молоко</label>
+              <input class="select-input visually-hidden" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
+              <label class="label label_checkbox" for="additionally4">Витамины</label>
+            </div>
+          </fieldset>
+          <!-- end Дополнительно -->
+          <div class="assortment-program__footer">
+            <button class="assortment-program__submit btn" type="submit">Отправить заявку</button>
+            <p class="assortment-program__footnote">* — Обязательные поля</p>
+          </div>
+        </form>
+      </section>
+    </div>
     <!-- end assortment-program -->
     <div class="contacts contacts_bg-gray">
-      <div class="contacts__wrap-text">
-        <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="container contacts__container">
+        <div class="contacts__wrap-text">
+          <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contacts__map">
         <img class="contacts__img" src="https://via.placeholder.com/320x400" width="320" height="400" alt="Адрес на карте">
