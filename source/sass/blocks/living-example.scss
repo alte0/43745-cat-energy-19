@@ -1,8 +1,64 @@
 .living-example {
   background-color: $gray;
-  padding: 23px 20px;
+  padding: 23px 0;
 }
 
 .living-example__list {
   @include clean-ul;
+  display: flex;
+}
+
+.living-example__costs {
+  color: $black111;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .living-example__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .living-example__list {
+    width: 355px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .living-example__costs {
+    text-align: right;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    // width: 180px;
+    width: 120px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .living-example__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .living-example__wrap {
+    padding-right: 135px;
+    width: 435px;
+  }
+
+  .graphic-example {
+    width: 570px;
+  }
+
+  .living-example__list,
+  .living-example__costs {
+    width: 100%;
+  }
+
+  .living-example__costs {
+    text-align: left;
+    margin-left: 0;
+  }
 }

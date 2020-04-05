@@ -5,6 +5,9 @@
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  padding-right: 16px;
+  width: 124px;
 }
 
 .losing-weight-list__text-small {
@@ -13,11 +16,8 @@
   font-family: "Arial", sans-serif;
   line-height: 12px;
   text-transform: none;
-}
-
-.living-example__costs {
-  color: $black111;
-  font-family: "Oswald", "Arial", sans-serif;
-  line-height: 20px;
-  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
 }
