@@ -15,8 +15,8 @@
 }
 
 .footer__list-social {
-  padding: 22px 0 21px;
-  margin: 31px 0 22px;
+  padding: 22px 0 17px;
+  margin: 27px 0 19px;
   list-style-type: none;
   border-top: 1px solid $gray-200;
   border-bottom: 1px solid $gray-200;
@@ -26,16 +26,40 @@
   color: $black444;
   font-size: 16px;
   line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover path {
+    fill: $green;
+  }
 
   &:active {
     opacity: 0.3;
   }
 }
 
+.footer__logo-htmlacademy {
+  margin-right: -7px;
+}
+
 @media (min-width: 768px) {
+  .footer {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
   .footer__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .footer__list-social {
+    padding: 0;
+  }
+
+  .footer__link-to-htmlacademy {
+    width: 163px;
   }
 }

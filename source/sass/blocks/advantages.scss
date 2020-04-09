@@ -1,8 +1,26 @@
 .advantages {
-  padding: 11px 0;
+  padding: 10px 0 33px;
 }
 
 .advantages__list {
   @include clean-ul;
-  margin-bottom: 31px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    padding: 33px 0;
+  }
+
+  .advantages__list {
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .advantages {
+    padding-top: 62px;
+    padding-bottom: 191px;
+  }
 }

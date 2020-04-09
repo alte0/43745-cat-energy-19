@@ -16,6 +16,10 @@
 }
 
 @media (min-width: 768px) {
+  .living-example {
+    padding-top: 43px;
+  }
+
   .living-example__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +36,6 @@
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 0;
-    // width: 180px;
     width: 120px;
   }
 }
