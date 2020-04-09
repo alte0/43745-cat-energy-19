@@ -1,6 +1,25 @@
 .show-more-products {
   text-align: center;
   padding-top: 80px;
+  display: block;
+  position: relative;
+
+  &::before,
+  &::after {
+    background-color: #d3d3d3;
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    margin: auto;
+    width: 30px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .show-more-products__big-text {
@@ -19,4 +38,40 @@
   line-height: 16px;
   margin-top: 0;
   margin-bottom: 21px;
+}
+
+@media (min-width: 768px) {
+  .show-more-products {
+    border: 1px solid $gray-100;
+    padding-top: 164px;
+
+    &::before,
+    &::after {
+      top: 83px;
+      width: 60px;
+    }
+  }
+
+  .show-more-products__big-text {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .show-more-products__text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 83px;
+  }
+
+  .show-more-products__big-text,
+  .show-more-products__text {
+    width: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .show-more-products__btn {
+    width: 100%;
+  }
 }
