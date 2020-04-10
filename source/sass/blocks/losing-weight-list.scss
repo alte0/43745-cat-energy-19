@@ -1,23 +1,54 @@
 .losing-weight-list__item {
+  border: 1px solid $gray-300;
+  border-radius: 3px;
   color: $black111;
   font-size: 24px;
   font-family: "Oswald", "Arial", sans-serif;
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 12px;
+  padding-bottom: 18px;
   position: relative;
-  padding-right: 16px;
-  width: 124px;
+  width: 122px;
 }
 
 .losing-weight-list__text-small {
+  background-color: $gray;
   color: $black444;
   font-size: 12px;
   font-family: "Arial", sans-serif;
   line-height: 12px;
   text-transform: none;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -17px;
+  padding-left: 16px;
+  padding-right: 17px;
+}
+
+@media (min-width: 768px) {
+  .losing-weight-list__item {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 15px;
+    width: 160px;
+  }
+
+  .losing-weight-list__text-small {
+    background-color: white;
+    bottom: -7px;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 8px;
+    padding-right: 9px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1300px) {
+  .losing-weight-list__text-small {
+    background-color: $gray;
+  }
 }

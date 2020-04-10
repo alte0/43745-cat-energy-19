@@ -1,11 +1,17 @@
 .living-example {
   background-color: $gray;
-  padding: 23px 0;
+  padding: 21px 0;
 }
 
 .living-example__list {
   @include clean-ul;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.living-example__desc {
+  margin: -4px 0 24px;
 }
 
 .living-example__costs {
@@ -13,34 +19,63 @@
   font-family: "Oswald", "Arial", sans-serif;
   line-height: 20px;
   text-align: center;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .living-example {
     padding-top: 43px;
+    background-color: transparent;
+    // overflow: hidden;
+    overflow-x: hidden;
   }
 
   .living-example__wrap {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 202px;
+  }
+
+  .living-example__desc {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 36px;
+    padding-right: 30px;
+    margin-bottom: 33px;
   }
 
   .living-example__list {
-    width: 355px;
+    width: 366px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
   .living-example__costs {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 31px;
     text-align: right;
     margin-left: auto;
-    margin-top: 0;
     margin-bottom: 0;
-    width: 120px;
+    width: auto;
+  }
+
+  .living-example__costs-span {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
 @media (min-width: 1300px) {
+  .living-example {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
   .living-example__container {
     display: flex;
     justify-content: space-between;
@@ -49,19 +84,34 @@
   .living-example__wrap {
     padding-right: 135px;
     width: 435px;
+    margin-bottom: 0;
+    align-self: start;
   }
 
-  .graphic-example {
-    width: 570px;
+  .living-example__list {
+    margin-bottom: 10px;
   }
 
-  .living-example__list,
+  .living-example__desc {
+    padding-top: 117px;
+    padding-right: 0;
+    margin-bottom: 48px;
+  }
+
+  // .living-example__list,
+  // .living-example__costs {
+  //   width: 100%;
+  // }
+
   .living-example__costs {
-    width: 100%;
-  }
-
-  .living-example__costs {
+    display: flex;
+    justify-content: space-between;
     text-align: left;
     margin-left: 0;
+    width: 327px;
+  }
+
+  .living-example__costs-span {
+    display: inline;
   }
 }
