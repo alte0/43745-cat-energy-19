@@ -29,6 +29,7 @@
   margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .product-list__characteristic-value_text-uppercase {
@@ -135,11 +136,6 @@
     position: relative;
     margin-bottom: 140px;
     width: 35.313%;//250px
-
-    // &:nth-last-child(1),
-    // &:nth-last-child(2) {
-    //   margin-bottom: 35px;
-    // }
   }
 
   .product-list__item_additional {
@@ -147,30 +143,48 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     width: auto;
-    padding: 15px 0;
-    border-bottom: 1px solid #ededed;
+    padding: 25px 36px 27px 37px;
+    border-bottom: 1px solid $gray-100;
+    border-left: 1px solid $gray-100;
+    border-right: 1px solid $gray-100;
   }
 
   .product-list__item_additional .product-list__title,
   .product-list__item_additional .product-list__wrap-characteristic {
+    margin-bottom: 23px;
     width: 285px;
   }
 
   .product-list__item_additional .product-list__title {
+    font-size: 20px;
+    line-height: 20px;
     padding-right: 30px;
     text-align: left;
+  }
+
+  .product-list__item_additional .product-list__wrap-characteristic,
+  .product-list__item_additional .product-list__characteristic-value {
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .product-list__item_additional .product-list__wrap-characteristic {
     padding-left: 30px;
     justify-content: end;
+    padding-top: 3px;
   }
 
   .product-list__item_additional .product-list__characteristic-value {
     min-width: 95px;
     text-align: right;
+  }
+
+  .product-list__item_additional .product-list__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 9px;
   }
 }
 
@@ -184,8 +198,10 @@
   .product-list__item_additional {
     align-items: center;
     width: 100%;
-    padding: 10px 0 10px;
-    margin-bottom: 20px;
+    padding: 15px 0 16px;
+    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
   }
 
   .product-list__item_additional .product-list__title,

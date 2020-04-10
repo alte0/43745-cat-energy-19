@@ -40,6 +40,10 @@
 }
 
 @media (min-width: 768px) {
+  .contacts_bg-gray {
+    padding-top: 20px;
+  }
+
   .contacts__wrap-text {
     display: flex;
     justify-content: space-between;
@@ -75,6 +79,10 @@
 }
 
 @media (min-width: 1300px) {
+  .contacts_bg-gray {
+    padding-top: 0;
+  }
+
   .contacts__container {
     position: relative;
   }
