@@ -1,29 +1,67 @@
 .label {
   display: block;
   color: $black222;
+  cursor: pointer;
   font-size: 16px;
   font-family: "Oswald", "Arial", sans-serif;
   line-height: 18px;
-  padding-left: 46px;
+  padding-left: 65px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  position: relative;
   text-transform: uppercase;
+  margin-bottom: 10px;
 
-  &:not(:last-child) {
-    margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  &_checkbox {
+    padding-left: 46px;
+  }
 }
 
 @media (min-width: 768px) {
+  .label {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 86px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .label_checkbox {
-    width: 238px;
+    padding-left: 57px;
+    width: 228px;
+    margin-bottom: 39px;
+    align-self: flex-start;
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+      margin-bottom: 21px;
+    }
   }
 }
 
 @media (min-width: 1300px) {
   .label_checkbox {
-    width: 199px;
+    width: 188px;
+  }
+
+  .label_checkbox,
+  .label_checkbox:nth-last-of-type(1),
+  .label_checkbox:nth-last-of-type(2) {
+    margin-bottom: 0;
+  }
+
+  .assortment-program__footer {
+    padding-top: 32px;
   }
 }

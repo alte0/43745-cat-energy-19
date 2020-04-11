@@ -1,13 +1,14 @@
 .assortment-program {
-  padding: 23px 0 34px;
+  padding: 19px 0 32px;
 }
 
 .assortment-program__desc {
   color: $black111;
   font-family: "Oswald", "Arial", sans-serif;
-  margin-top: 0;
-  margin-bottom: 37px;
+  margin-top: -3px;
+  margin-bottom: 30px;
   text-transform: uppercase;
+  max-width: 270px;
 }
 
 .assortment-program__fieldset {
@@ -21,11 +22,27 @@
     border: 1px solid $gray-150;
     margin-left: -20px;
     margin-right: -20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &_contacts {
+    padding-top: 18px;
+    padding-bottom: 5px;
+  }
+
+  &_extra {
+    padding-top: 20px;
+    padding-bottom: 35px;
   }
 }
 
 .assortment-program__label {
   margin-bottom: 14px;
+}
+
+.assortment-program__large-2 {
+  margin-bottom: 10px;
 }
 
 .assortment-program__textarea {
@@ -44,11 +61,22 @@
     line-height: 18px;
     text-transform: uppercase;
   }
+
+  &:hover {
+    border-color: $gray-250;
+  }
+
+  &:focus {
+    border-color: $black444;
+  }
 }
 
 .assortment-program__submit {
   border: none;
-  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 9px;
+  margin-bottom: 21px;
 }
 
 .assortment-program__footnote {
@@ -58,8 +86,27 @@
 }
 
 @media (min-width: 768px) {
+  .assortment-program {
+    padding-top: 38px;
+    padding-bottom: 72px;
+  }
+
   .assortment-program__desc {
-    width: 304px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 350px;
+    margin-top: 56px;
+  }
+
+  .assortment-program__fieldset {
+    padding: 36px 0;
+
+    &_border {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
   }
 
   .assortment-program__desc,
@@ -73,6 +120,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: -15px;
+  }
+
+  .assortment-program__textarea {
+    min-height: 176px;
+    padding: 12px 17px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   .assortment-program__footer {
@@ -82,17 +140,37 @@
   }
 
   .assortment-program__submit {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 15px;
+    padding-bottom: 17px;
     margin-bottom: 0;
     width: 283px;
   }
 
   .assortment-program__footnote {
     text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
     width: 286px;
+  }
+
+  .assortment-program__fieldset_contacts {
+    padding-top: 58px;
+    padding-bottom: 10px;
+  }
+
+  .assortment-program__fieldset_extra {
+    padding-top: 27px;
   }
 }
 
 @media (min-width: 1300px) {
+  .assortment-program {
+    padding-top: 55px;
+    padding-bottom: 82px;
+  }
+
   .assortment-program__desc,
   .assortment-program__fieldset,
   .assortment-program__footer {
@@ -114,9 +192,21 @@
 
   .assortment-program__label:last-child {
     margin-bottom: 0;
+    align-self: start;
   }
 
   .assortment-program__desc {
     width: 325px;
+  }
+
+  .assortment-program__fieldset_border {
+    margin-top: 35px;
+    align-self: flex-start;
+    padding-bottom: 26px;
+  }
+
+  .assortment-program__fieldset_contacts {
+    padding-top: 22px;
+    padding-bottom: 0;
   }
 }

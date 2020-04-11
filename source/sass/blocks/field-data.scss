@@ -8,7 +8,7 @@
   color: $black222;
   font-size: 16px;
   font-family: "Oswald", "Arial", sans-serif;
-  margin-right: 16px;
+  margin-right: 13px;
   text-transform: uppercase;
   flex-shrink: 0;
 }
@@ -16,7 +16,7 @@
 .field-data__input {
   color: $black444;
   border: 1px solid $gray-100;
-  padding: 14px 16px;
+  padding: 13px 16px 12px 15px;
   font-size: 16px;
   font-family: "Oswald", "Arial", sans-serif;
   min-width: 10px;
@@ -45,7 +45,7 @@
   }
 
   &:focus:invalid {
-    border-color: #ff8282;
+    border-color: $error;
   }
 
   &:invalid {
@@ -56,5 +56,35 @@
 .field-data__icon-email,
 .field-data__icon-tel {
   position: absolute;
-  right: 0;
+  right: 14px;
+}
+
+.field-data__input:active + .field-data__icon-email path,
+.field-data__input:active + .field-data__icon-tel path {
+  fill: $green;
+}
+
+.field-data__input:focus:invalid + .field-data__icon-email path,
+.field-data__input:focus:invalid + .field-data__icon-tel path {
+  fill: $error;
+}
+
+@media (min-width: 768px) {
+  .field-data__span,
+  .field-data__input {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .field-data__span {
+    margin-right: 16px;
+  }
+
+  .field-data__input {
+    padding: 15px 18px 15px 18px;
+  }
+
+  .assortment-program__label {
+    margin-bottom: 20px;
+  }
 }
