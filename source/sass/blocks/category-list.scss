@@ -75,6 +75,15 @@
     height: 11px;
     width: 24px;
   }
+
+  &:active::before,
+  &:hover::before {
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-size: cover;
+    right: -7px;
+    height: 11px;
+    width: 33px;
+  }
 }
 
 @media (max-width: 767px) {
