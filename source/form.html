@@ -104,14 +104,23 @@
           <fieldset class="assortment-program__fieldset assortment-program__fieldset_extra">
             <h3 class="title title_line">Дополнительно</h3>
             <div class="assortment-program__wrap-checkbox">
-              <input class="select-input visually-hidden" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
-              <label class="label label_checkbox" for="additionally1">Сахарозаменитель</label>
-              <input class="select-input visually-hidden" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
-              <label class="label label_checkbox" for="additionally2">Питьевая вода</label>
-              <input class="select-input visually-hidden" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
-              <label class="label label_checkbox" for="additionally3">Молоко</label>
-              <input class="select-input visually-hidden" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
-              <label class="label label_checkbox" for="additionally4">Витамины</label>
+              <!-- assortment-program__item-checkbox fix ie11 bug: "justify-content: space-between" -->
+              <div class="assortment-program__item-checkbox">
+                <input class="select-input visually-hidden" id="additionally1" name="additionally1" type="checkbox" value="additionally1" checked="checked">
+                <label class="label label_checkbox" for="additionally1">Сахарозаменитель</label>
+              </div>
+              <div class="assortment-program__item-checkbox">
+                <input class="select-input visually-hidden" id="additionally2" name="additionally2" type="checkbox" value="additionally2">
+                <label class="label label_checkbox" for="additionally2">Питьевая вода</label>
+              </div>
+              <div class="assortment-program__item-checkbox">
+                <input class="select-input visually-hidden" id="additionally3" name="additionally3" type="checkbox" value="additionally3">
+                <label class="label label_checkbox" for="additionally3">Молоко</label>
+              </div>
+              <div class="assortment-program__item-checkbox">
+                <input class="select-input visually-hidden" id="additionally4" name="additionally4" type="checkbox" value="additionally4">
+                <label class="label label_checkbox" for="additionally4">Витамины</label>
+              </div>
             </div>
           </fieldset>
           <!-- end Дополнительно -->
@@ -145,7 +154,7 @@
       <a class="footer__link-to-home" href="index.html">
         <img class="footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Лого Cat energy">
       </a>
-      <ul class="social-list">
+      <ul class="social-list footer__list-social">
         <li class="social-list__item">
           <a class="social-list__link social-list__link_vk" href="https://www.vk.com" target="_blank">
             <span class="visually-hidden">vkontakte</span>

@@ -57,6 +57,9 @@
 .field-data__icon-tel {
   position: absolute;
   right: 14px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .field-data__input:active + .field-data__icon-email path,

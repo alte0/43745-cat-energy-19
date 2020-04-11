@@ -21,6 +21,8 @@
   }
 
   &_checkbox {
+    display: inline-block;
+    vertical-align: top;
     padding-left: 46px;
   }
 }
@@ -39,12 +41,15 @@
 
   .label_checkbox {
     padding-left: 57px;
-    width: 228px;
-    margin-bottom: 39px;
-    align-self: flex-start;
+    width: 227px;
+  }
 
-    &:nth-last-of-type(1),
-    &:nth-last-of-type(2) {
+  .assortment-program__item-checkbox {
+    align-self: flex-start;
+    margin-bottom: 40px;
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
       margin-bottom: 21px;
     }
   }
@@ -55,9 +60,9 @@
     width: 188px;
   }
 
-  .label_checkbox,
-  .label_checkbox:nth-last-of-type(1),
-  .label_checkbox:nth-last-of-type(2) {
+  .assortment-program__item-checkbox,
+  .assortment-program__item-checkbox:nth-last-child(1),
+  .assortment-program__item-checkbox:nth-last-child(2) {
     margin-bottom: 0;
   }
 
