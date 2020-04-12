@@ -43,30 +43,10 @@
     padding-left: 57px;
     width: 227px;
   }
-
-  .assortment-program__item-checkbox {
-    align-self: flex-start;
-    margin-bottom: 40px;
-
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
-      margin-bottom: 21px;
-    }
-  }
 }
 
 @media (min-width: 1300px) {
   .label_checkbox {
     width: 188px;
-  }
-
-  .assortment-program__item-checkbox,
-  .assortment-program__item-checkbox:nth-last-child(1),
-  .assortment-program__item-checkbox:nth-last-child(2) {
-    margin-bottom: 0;
-  }
-
-  .assortment-program__footer {
-    padding-top: 32px;
   }
 }
