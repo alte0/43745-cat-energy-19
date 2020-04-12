@@ -4,7 +4,7 @@
 
 .additional-items__list {
   @include clean-ul;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .additional-items__order-all {
@@ -34,7 +34,7 @@
 
   .additional-items__list {
     border-top: 1px solid $gray-100;
-    margin-top: 48px;
+    margin-top: 7px;
     margin-bottom: 69px;
   }
 
@@ -54,6 +54,7 @@
 
   .additional-items__desc-order {
     text-align: left;
+    margin-bottom: -10px;
     width: 160px;
   }
 }
@@ -71,7 +72,6 @@
 
   .additional-items__list {
     width: 895px;
-    margin-top: 47px;
     margin-bottom: 0;
   }
 
@@ -82,8 +82,12 @@
     padding-left: 37px;
     padding-right: 37px;
     padding-bottom: 37px;
-    margin-top: 47px;
     text-align: center;
+  }
+
+  .additional-items__list,
+  .additional-items__order-all {
+    margin-top: 5px;
   }
 
   .additional-items__gift {
