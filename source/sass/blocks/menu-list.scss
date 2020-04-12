@@ -9,7 +9,6 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $black111;
-  font-weight: 500;
   position: relative;
   font-family: "Oswald", "Arial", sans-serif;
 
@@ -25,6 +24,10 @@
 @media (max-width: 767px) {
   .menu-list__item {
     border-top: 1px solid $gray-100;
+  }
+
+  .menu-list__link {
+    font-weight: 500;
   }
 }
 
