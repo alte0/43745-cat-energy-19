@@ -14,7 +14,7 @@
     background-color: #63a73a;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     z-index: -1;
   }
 }
@@ -88,6 +88,9 @@
   .slogan__img {
     position: absolute;
     left: 50%;
+    bottom: -16px;
+    height: 609px;
+    width: 709px;
     transform: translateX(-50%);
     z-index: -1;
   }
@@ -127,6 +130,23 @@
   .slogan__img {
     left: 50%;
     top: 50%;
-    transform: translate(-25%, -50%);
+    height: 499px;
+    width: 552px;
+    transform: translate(-29%, -54.6%);
+  }
+}
+
+@media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .slogan::before {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
+}
+
+@media (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {
+  .slogan::before {
+    background-image: url("../img/index-background-desktop@2x.jpg");
+    background-size: 1440px auto;
+    background-position: center right;
   }
 }
