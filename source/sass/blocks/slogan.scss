@@ -15,6 +15,7 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     z-index: -1;
   }
 }
@@ -108,6 +109,7 @@
       background-color: #63a73a;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-position: bottom right;
+      background-size: cover;
     }
   }
 
@@ -139,14 +141,12 @@
 @media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .slogan::before {
     background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 640px auto;
   }
 }
 
 @media (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {
   .slogan::before {
     background-image: url("../img/index-background-desktop@2x.jpg");
-    background-size: 1440px auto;
     background-position: center right;
   }
 }
