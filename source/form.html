@@ -11,13 +11,18 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async></script>
 </head>
 
 <body>
   <header class="header">
     <div class="container header__container">
       <a class="header__link-to-home" href="index.html">
-        <img class="header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Лого Cat energy">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Лого Cat energy">
+        </picture>
       </a>
       <button class="button header__toggle-menu">
         <span class="button__icon button__icon_toggle-menu"></span>

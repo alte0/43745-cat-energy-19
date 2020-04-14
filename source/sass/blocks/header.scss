@@ -73,6 +73,11 @@
     justify-content: space-between;
   }
 
+  .header__logo {
+    height: 58px;
+    width: 173px;
+  }
+
   .header__nav {
     max-width: 65%;
   }
@@ -86,5 +91,10 @@
   .header {
     padding-top: 49px;
     border-bottom: none;
+  }
+
+  .header__logo {
+    height: 59px;
+    width: 202px;
   }
 }
