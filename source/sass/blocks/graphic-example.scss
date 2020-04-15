@@ -90,11 +90,15 @@
   }
 
   .graphic-example__before-photo-cat {
+    clip: rect(0, 334px, 508px, 0);
+    height: 508px;
+    width: 669px;
     z-index: 2;
-    clip: rect(0, 150px, 240px, 0);
   }
 
   .graphic-example__after-photo-cat {
+    height: 508px;
+    width: 710px;
     z-index: 1;
   }
 
@@ -187,5 +191,21 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 10px;
+  }
+
+  .graphic-example__before-photo-cat {
+    clip: rect(0, 359px, 508px, 0);
+    height: 518px;
+  }
+
+  .graphic-example__after-photo-cat {
+    height: 520px;
+    width: 680px;
+  }
+
+  .graphic-example__before-photo-cat,
+  .graphic-example__after-photo-cat {
+    top: -190px;
+    transform: translateX(-11%);
   }
 }
