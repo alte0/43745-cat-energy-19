@@ -30,7 +30,8 @@
   justify-content: space-between;
   align-items: center;
 
-  &:hover path {
+  &:focus .footer__logo-htmlacademy,
+  &:hover .footer__logo-htmlacademy {
     fill: $green;
   }
 
@@ -41,6 +42,7 @@
 
 .footer__logo-htmlacademy {
   margin-right: -7px;
+  fill: $gray-666;
 }
 
 @media (min-width: 768px) {

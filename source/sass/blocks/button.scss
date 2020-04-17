@@ -11,6 +11,10 @@
   height: 38px;
   width: 24px;
 
+  &_toggle-menu {
+    font-size: 0;
+  }
+
   &_toggle-menu::before,
   &_toggle-menu::after {
     background-color: $black222;
