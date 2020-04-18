@@ -51,10 +51,8 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 767px) {
-  .graphic-example__after-photo-cat {
-    display: none;
-  }
+.graphic-example__after-photo-cat {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +88,7 @@
   }
 
   .graphic-example__before-photo-cat {
-    clip: rect(0, 334px, 508px, 0);
+    // clip: rect(0, 334px, 508px, 0);
     height: 508px;
     width: 669px;
     z-index: 2;
@@ -194,7 +192,7 @@
   }
 
   .graphic-example__before-photo-cat {
-    clip: rect(0, 359px, 508px, 0);
+    // clip: rect(0, 359px, 508px, 0);
     height: 518px;
   }
 
