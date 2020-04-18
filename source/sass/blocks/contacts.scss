@@ -39,6 +39,13 @@
   vertical-align: top;
 }
 
+.contacts__map-js {
+  position: absolute;
+  bottom: 0;
+  height: 362px;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .contacts_bg-gray {
     padding-top: 20px;
@@ -80,6 +87,10 @@
   .contacts__img {
     width: 768px;
   }
+
+  .contacts__map-js {
+    height: 395px;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -99,6 +110,7 @@
     left: 40px;
     top: 196px;
     transform: translateY(-50%);
+    z-index: 1;
   }
 
   .contacts__address {
@@ -111,5 +123,9 @@
 
   .contacts__img {
     width: 1440px;
+  }
+
+  .contacts__map-js {
+    height: 400px;
   }
 }
