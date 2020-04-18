@@ -16,8 +16,15 @@
   }
 }
 
+.social-list__icon-vk,
+.social-list__icon-ins,
+.social-list__icon-fb {
+  fill: $gray-666;
+}
+
 .social-list__link {
-  &:hover path {
+  &:focus svg,
+  &:hover svg {
     fill: $green;
   }
 
