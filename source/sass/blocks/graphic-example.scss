@@ -78,26 +78,47 @@
     height: 240px;
   }
 
-  .graphic-example__before-photo-cat,
-  .graphic-example__after-photo-cat {
+  .graphic-example__before-photo-cat-wrap,
+  .graphic-example__after-photo-cat-wrap {
     position: absolute;
-    top: -160px;
-    left: 0;
-    right: 0;
-    margin: auto;
+    top: -170px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
   }
 
-  .graphic-example__before-photo-cat {
-    // clip: rect(0, 334px, 508px, 0);
-    height: 508px;
-    width: 669px;
+  .graphic-example__before-photo-cat-wrap {
+    width: 50%;
     z-index: 2;
   }
 
-  .graphic-example__after-photo-cat {
-    height: 508px;
-    width: 710px;
+  .graphic-example__after-photo-cat-wrap {
+    width: 50%;
     z-index: 1;
+    right: 0;
+    transform: rotateY(180deg);
+  }
+
+  .graphic-example__before-photo-cat,
+  .graphic-example__after-photo-cat {
+    display: block;
+  }
+
+  .graphic-example__before-photo-cat {
+    height: 518px;
+    width: 669px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-50%);
+    margin-left: auto;
+  }
+
+  .graphic-example__after-photo-cat {
+    height: 518px;
+    width: 710px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-50%) rotateY(180deg);
   }
 
   .graphic-example__wrap {
@@ -175,35 +196,38 @@
 
 @media (min-width: 1300px) {
   .graphic-example {
-    width: 570px;
+    width: 650px;
     padding-top: 0;
     padding-bottom: 65px;
     margin-top: 135px;
+    margin-right: -40px;
   }
 
   .graphic-example__imgs-wrap {
     height: 332px;
+    transform: translate(-3.2%, -5.5%);
   }
 
   .graphic-example__wrap {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 10px;
   }
 
+  .graphic-example__before-photo-cat-wrap {
+    width: 53.2%;
+  }
+
   .graphic-example__before-photo-cat {
-    // clip: rect(0, 359px, 508px, 0);
-    height: 518px;
+    transform: translateX(-53%);
+    width: 690px;
+  }
+
+  .graphic-example__after-photo-cat-wrap {
+    width: 46.8%;
   }
 
   .graphic-example__after-photo-cat {
-    height: 520px;
-    width: 680px;
-  }
-
-  .graphic-example__before-photo-cat,
-  .graphic-example__after-photo-cat {
-    top: -190px;
-    transform: translateX(-11%);
+    transform: translateX(-47%) rotateY(180deg);
   }
 }

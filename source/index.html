@@ -130,22 +130,26 @@
         </div>
         <div class="graphic-example">
           <div class="graphic-example__imgs-wrap">
-            <picture>
-              <!-- <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x"> -->
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
-              <img class="graphic-example__before-photo-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Картинка кота до">
-            </picture>
-            <picture>
-              <!-- <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x"> -->
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
-              <img class="graphic-example__after-photo-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Картинка кота после">
-            </picture>
+            <div class="graphic-example__before-photo-cat-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                <img class="graphic-example__before-photo-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Картинка кота до">
+              </picture>
+            </div>
+            <div class="graphic-example__after-photo-cat-wrap">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                <img class="graphic-example__after-photo-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Картинка кота после">
+              </picture>
+            </div>
           </div>
           <div class="graphic-example__wrap">
             <button class="graphic-example__btn">Было</button>
@@ -168,15 +172,15 @@
       </div>
       <div class="contacts__map">
         <picture>
-          <!-- <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x"> -->
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
           <img class="contacts__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Адрес на карте">
         </picture>
       </div>
-      <!-- <div class="contacts__map-js" id="map"></div> -->
+      <div class="contacts__map-js" id="map"></div>
     </div>
   </main>
   <footer class="footer">
@@ -220,7 +224,7 @@
   </footer>
   <script src="js/picturefill.min.js" async></script>
   <script src="js/svg4everybody.min.js" defer></script>
-  <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adc4ab53d3d8909a30ad6bd7dbdacca24a2a359c94d147187794efef1943a6c46&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false&amp;id=map"></script> -->
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adc4ab53d3d8909a30ad6bd7dbdacca24a2a359c94d147187794efef1943a6c46&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false&amp;id=map"></script>
   <script src="js/script.js"></script>
 </body>
 

@@ -17,10 +17,22 @@ function ready() {
     }
   }
 
-  header.classList.remove("header_open");
-  toggle.addEventListener("click", handerClickToggle);
-  catalogLists.addEventListener("click", handerClickOrder);
-  additionalList.addEventListener("click", handerClickOrder);
+  if (header) {
+    header.classList.remove("header_open");
+  }
+
+  if (toggle) {
+    toggle.addEventListener("click", handerClickToggle);
+  }
+
+  if (catalogLists) {
+    catalogLists.addEventListener("click", handerClickOrder);
+  }
+
+  if (additionalList) {
+    additionalList.addEventListener("click", handerClickOrder);
+  }
+
   svg4everybody();
 }
 

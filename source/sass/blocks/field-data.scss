@@ -24,7 +24,21 @@
   text-transform: uppercase;
   box-sizing: border-box;
 
-  &::placeholder {
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &::-ms-input-placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &::-webkit-input-placeholder {
     opacity: 1;
     color: $black444;
     font-size: inherit;
@@ -35,22 +49,24 @@
     border-color: $gray-300;
   }
 
-  &:focus,
-  &:focus:invalid {
-    border-width: 2px;
-  }
-
   &:focus {
     border-color: $black444;
-  }
-
-  &:focus:invalid {
-    border-color: $error;
+    border-width: 2px;
+    outline: none;
   }
 
   &:invalid {
     outline: none;
   }
+
+  &:focus:required:invalid {
+    border-color: $error;
+    border-width: 2px;
+  }
+}
+
+:not(output):-moz-ui-invalid {
+  box-shadow: none;
 }
 
 .field-data__icon-email,
@@ -60,15 +76,16 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  fill: $black222;
 }
 
-.field-data__input:active + .field-data__icon-email path,
-.field-data__input:active + .field-data__icon-tel path {
+.field-data__input:focus:required:valid + .field-data__icon-email,
+.field-data__input:focus:required:valid + .field-data__icon-tel {
   fill: $green;
 }
 
-.field-data__input:focus:invalid + .field-data__icon-email path,
-.field-data__input:focus:invalid + .field-data__icon-tel path {
+.field-data__input:focus:required:invalid + .field-data__icon-email,
+.field-data__input:focus:required:invalid + .field-data__icon-tel {
   fill: $error;
 }
 
