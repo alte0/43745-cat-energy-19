@@ -1,5 +1,19 @@
 .graphic-example {
   padding-top: 23px;
+
+  &_after .graphic-example__before-photo-cat {
+    display: none;
+  }
+
+  &_after .graphic-example__after-photo-cat {
+    display: block;
+  }
+
+  &_after .graphic-example__bar::before {
+    left: 50%;
+    right: 5px;
+    transition: all 0.3s linear;
+  }
 }
 
 .graphic-example__imgs-wrap {
@@ -36,6 +50,7 @@
     bottom: 0;
     height: 6px;
     margin: auto;
+    transition: all 0.3s linear;
   }
 }
 
@@ -72,6 +87,42 @@
       left: -250%;
       right: -250%;
     }
+    /*состояние после*/
+    &_after .graphic-example__bar::before,
+    &_after .graphic-example__bar::after {
+      left: 100%;
+    }
+
+    &_after .graphic-example__before-photo-cat-wrap {
+      width: 0%;
+    }
+
+    &_after .graphic-example__after-photo-cat-wrap {
+      width: 100%;
+    }
+
+    &_after .graphic-example__after-photo-cat {
+      transform: translateX(-100%) rotateY(180deg);
+    }
+    /*состояние после end*/
+    /*состояние до*/
+    &_before .graphic-example__bar::before,
+    &_before .graphic-example__bar::after {
+      left: 0%;
+    }
+
+    &_before .graphic-example__before-photo-cat-wrap {
+      width: 100%;
+    }
+
+    &_before .graphic-example__after-photo-cat-wrap {
+      width: 0%;
+    }
+
+    &_before .graphic-example__before-photo-cat {
+      transform: translateX(-100%);
+    }
+    /*состояние до end*/
   }
 
   .graphic-example__imgs-wrap {
