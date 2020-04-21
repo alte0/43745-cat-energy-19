@@ -173,7 +173,7 @@ gulp.task("copyImgs", function () {
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest(paths.build.imgs))
@@ -212,7 +212,7 @@ gulp.task("spritePng", function () {
   var imgStream = spriteData.img
     .pipe(buffer())
     .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 5 })
+      imagemin.optipng({ optimizationLevel: 3 })
     ]))
     .pipe(gulpif(isProd, gulp.dest(paths.build.png)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.png)))
