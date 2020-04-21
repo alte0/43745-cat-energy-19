@@ -157,7 +157,7 @@ gulp.task("js", function () {
 
 gulp.task("cWebp", function () {
   return gulp.src(paths.src.cwebp)
-    .pipe(webp({ quality: 75 }))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulpif(isProd, gulp.dest(paths.build.cwebp)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.cwebp)))
     .pipe(server.stream());
