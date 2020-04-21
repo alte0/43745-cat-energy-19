@@ -22,6 +22,7 @@ var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 var spritesmith = require('gulp.spritesmith');
 var buffer = require('vinyl-buffer');
+var validate = require('gulp-html-validate');
 var ghpages = require('gh-pages');
 var env = process.env.NODE_ENV || "dev";
 var isProd = env === "prod" ? true : false;
@@ -137,6 +138,7 @@ gulp.task("html", function () {
     .pipe(posthtml(plugins, options))
     .pipe(gulpif(isProd, gulp.dest(paths.build.html)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.html)))
+    .pipe(validate())
     .pipe(server.stream());
 });
 
