@@ -7,21 +7,36 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "cross-env": "7.0.2",
+    "del": "5.1.0",
     "gulp": "4.0.x",
+    "gulp-csso": "4.0.1",
+    "gulp-if": "3.0.0",
+    "gulp-imagemin": "7.0.0",
+    "gulp-js-import": "1.0.6",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "3.0.4",
+    "gulp-rename": "2.0.0",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
-    "normalize.css": "8.0.1",
+    "gulp-svgstore": "7.0.1",
+    "gulp-tap": "2.0.0",
+    "gulp-uglify": "3.0.2",
+    "gulp-webp": "4.0.1",
+    "gulp.spritesmith": "6.11.0",
+    "posthtml-beautify": "0.3.1",
+    "posthtml-include": "1.4.3",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "vinyl-buffer": "1.0.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "npx gulp css",
-    "start": "npx gulp start"
+    "build": "cross-env NODE_ENV=prod npx gulp prod",
+    "start": "cross-env NODE_ENV=dev npx gulp start"
   },
   "browserslist": [
     "last 2 versions",
@@ -38,5 +53,10 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1",
+    "picturefill": "3.0.3",
+    "svg4everybody": "2.1.9"
   }
 }
