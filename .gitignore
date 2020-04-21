@@ -7,6 +7,14 @@
 *.psd
 *.sublime*
 node_modules/
+build/
+source/*.html
+source/js/script.js
+source/js/script.js.map
+source/img/*.webp
+source/img/sprite.svg
+source/img/sprite@1x.png
+source/img/sprite@2x.png
 npm-debug.*
 source/css/*.css
 source/css/*.map
