@@ -7,16 +7,12 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-
 var del = require('del');
-
 var tap = require("gulp-tap");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var beautify = require("posthtml-beautify");
-
 var csso = require('gulp-csso');
-
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
 var jsImport = require('gulp-js-import');
@@ -26,7 +22,7 @@ var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 var spritesmith = require('gulp.spritesmith');
 var buffer = require('vinyl-buffer');
-
+var ghpages = require('gh-pages');
 var env = process.env.NODE_ENV || "dev";
 var isProd = env === "prod" ? true : false;
 var paths = {
@@ -244,3 +240,4 @@ gulp.task("server", function () {
 gulp.task("first", gulp.series("spriteSvg", "spritePng", "cWebp", "css", "js", "html"));
 gulp.task("start", gulp.series(gulp.parallel("delTempDev", "delWebp"), "first", "server"));
 gulp.task("prod", gulp.series("delBuild", "first", "copyFonts", "copyImgs"));
+ghpages.publish("build");
