@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<include src="head.html" locals='{"text": "Главная"}'></include>
+
+<body>
+  <header class="header header_open">
+    <div class="container header__container">
+      <a class="header__link-to-home">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Лого Cat energy">
+        </picture>
+      </a>
+      <button class="button header__toggle-menu">
+        <span class="button__icon button__icon_toggle-menu">Закрыть меню</span>
+        <span class="button__text visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="header__nav">
+        <ul class="menu-list header__list-menu">
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link_desktop-white menu-list__link_active"
+              href="index.html">Главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link_desktop-white" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link_desktop-white" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Кэт энерджи - Интернет-магазин фитнес еды для котиков</h1>
+    <section class="slogan">
+      <div class="container">
+        <div class="slogan__wrap">
+          <h2 class="slogan__title">Функциональное питание для котов</h2>
+          <p class="slogan__desc">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1300px)" type="image/webp"
+              srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp"
+              srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+            <img class="slogan__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
+              width="280" height="270" alt="Фото продукта Cat energy pro курица">
+          </picture>
+          <a class="slogan__btn btn" href="form.html">Подобрать программу</a>
+        </div>
+      </div>
+    </section>
+    <!-- end slogan -->
+    <section class="categories">
+      <div class="container">
+        <h2 class="visually-hidden">Список каталогов</h2>
+        <ul class="category-list categories__list">
+          <li class="category-list__item">
+            <div class="category-list__wrap-img">
+              <svg class="category-list__img" height="50" width="51">
+                <use xlink:href="img/sprite.svg#icon-cat-slim"></use>
+              </svg>
+            </div>
+            <h3 class="category-list__title">Похудение</h3>
+            <p class="category-list__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="category-list__link" href="cataog-slim.html">Каталог Slim</a>
+          </li>
+          <li class="category-list__item">
+            <div class="category-list__wrap-img">
+              <svg class="category-list__img" height="60" width="70">
+                <use xlink:href="img/sprite.svg#icon-cat-pro"></use>
+              </svg>
+            </div>
+            <h3 class="category-list__title">Набор массы</h3>
+            <p class="category-list__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+              поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="category-list__link" href="cataog-pro.html">Каталог Pro</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end categories -->
+    <section class="advantages">
+      <div class="container">
+        <h2 class="title">Как это работает</h2>
+        <ul class="advantages-list advantages__list">
+          <li class="advantages-list__item advantages-list__item_leaf">
+            <p class="advantages-list__text">Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item_powder">
+            <p class="advantages-list__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
+          </li>
+          <li class="advantages-list__item advantages-list__item_dining">
+            <p class="advantages-list__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item_clock">
+            <p class="advantages-list__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end advantages -->
+    <section class="living-example">
+      <div class="container living-example__container">
+        <div class="living-example__wrap">
+          <h3 class="title">Живой пример</h3>
+          <p class="living-example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по 16 часов в день.</p>
+          <ul class="losing-weight-list living-example__list">
+            <li class="losing-weight-list__item">
+              <span class="losing-weight-list__text-small">снижение веса</span> 5кг
+            </li>
+            <li class="losing-weight-list__item">
+              <span class="losing-weight-list__text-small">затрачено времени</span> 60 дней
+            </li>
+          </ul>
+          <p class="living-example__costs">
+            <span class="living-example__costs-span">Затраты на питание:</span>
+            <span class="living-example__costs-span">15 000 руб.</span>
+          </p>
+        </div>
+        <div class="graphic-example">
+          <div class="graphic-example__imgs-wrap">
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)"
+                srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+              <img class="graphic-example__before-photo-cat" src="img/before-mobile@1x.png"
+                srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Картинка кота до">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)"
+                srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+              <img class="graphic-example__after-photo-cat" src="img/after-mobile@1x.png"
+                srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Картинка кота после">
+            </picture>
+          </div>
+          <div class="graphic-example__wrap">
+            <button class="graphic-example__btn" type="button" data-side="left">Было</button>
+            <span class="graphic-example__bar">
+              <span class="graphic-example__slider"></span>
+            </span>
+            <button class="graphic-example__btn" type="button" data-side="right">Стало</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end living-example -->
+    <div class="contacts">
+      <div class="container contacts__container">
+        <div class="contacts__wrap-text">
+          <p class="contacts__welcome">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__city">Санкт-Петербург</span>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+          <img class="contacts__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320"
+            height="400" alt="Адрес на карте">
+        </picture>
+      </div>
+      <div class="contacts__map-js" id="map"></div>
+    </div>
+  </main>
+  <include src="footer.html"></include>
+  <include src="script.html"></include>
+</body>
+
+</html>
