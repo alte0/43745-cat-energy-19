@@ -1,15 +1,7 @@
 .graphic-example {
   padding-top: 23px;
 
-  &_after .graphic-example__before-photo-cat {
-    display: none;
-  }
-
-  &_after .graphic-example__after-photo-cat {
-    display: block;
-  }
-
-  &_after .graphic-example__bar::before {
+  &_after .graphic-example__slider {
     left: 50%;
     right: 5px;
     transition: all 0.3s linear;
@@ -38,20 +30,19 @@
   height: 12px;
   width: 82px;
   position: relative;
+}
 
-  &::before {
-    content: "";
-    background-color: $green;
-    border-radius: 6px;
-    position: absolute;
-    left: 5px;
-    right: 50%;
-    top: 0;
-    bottom: 0;
-    height: 6px;
-    margin: auto;
-    transition: all 0.3s linear;
-  }
+.graphic-example__slider {
+  background-color: $green;
+  border-radius: 6px;
+  position: absolute;
+  left: 5px;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  height: 6px;
+  margin: auto;
+  transition: all 0.3s linear;
 }
 
 .graphic-example__btn {
@@ -66,8 +57,20 @@
   text-transform: uppercase;
 }
 
-.graphic-example__after-photo-cat {
-  display: none;
+@media (max-width: 767px) {
+  .graphic-example {
+    &_after .graphic-example__before-photo-cat {
+      display: none;
+    }
+
+    &_after .graphic-example__after-photo-cat {
+      display: inline-block;
+    }
+  }
+
+  .graphic-example__after-photo-cat {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -88,39 +91,31 @@
       right: -250%;
     }
     /*состояние после*/
-    &_after .graphic-example__bar::before,
-    &_after .graphic-example__bar::after {
+    &_after .graphic-example__slider {
       left: 100%;
+      transition: none;
     }
 
-    &_after .graphic-example__before-photo-cat-wrap {
-      width: 0%;
-    }
-
-    &_after .graphic-example__after-photo-cat-wrap {
-      width: 100%;
+    &_after .graphic-example__before-photo-cat {
+      clip: rect(0, 0, 685px, 0);
     }
 
     &_after .graphic-example__after-photo-cat {
-      transform: translateX(-100%) rotateY(180deg);
+      clip: rect(0, 685px, 685px, 0);
     }
     /*состояние после end*/
     /*состояние до*/
-    &_before .graphic-example__bar::before,
-    &_before .graphic-example__bar::after {
+    &_before .graphic-example__slider {
       left: 0%;
-    }
-
-    &_before .graphic-example__before-photo-cat-wrap {
-      width: 100%;
-    }
-
-    &_before .graphic-example__after-photo-cat-wrap {
-      width: 0%;
+      transition: none;
     }
 
     &_before .graphic-example__before-photo-cat {
-      transform: translateX(-100%);
+      clip: rect(0, 685px, 685px, 0);
+    }
+
+    &_before .graphic-example__after-photo-cat {
+      clip: rect(0, 710px, 518px, 710px);
     }
     /*состояние до end*/
   }
@@ -129,47 +124,30 @@
     height: 240px;
   }
 
-  .graphic-example__before-photo-cat-wrap,
-  .graphic-example__after-photo-cat-wrap {
-    position: absolute;
-    top: -170px;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .graphic-example__before-photo-cat-wrap {
-    width: 50%;
-    z-index: 2;
-  }
-
-  .graphic-example__after-photo-cat-wrap {
-    width: 50%;
-    z-index: 1;
-    right: 0;
-    transform: rotateY(180deg);
-  }
-
   .graphic-example__before-photo-cat,
   .graphic-example__after-photo-cat {
-    display: block;
+    display: inline-block;
+    position: absolute;
+    top: -170px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .graphic-example__before-photo-cat {
+    clip: rect(0, 337px, 685px, 0);
     height: 518px;
-    width: 669px;
-    position: relative;
-    left: 100%;
-    transform: translateX(-50%);
-    margin-left: auto;
+    width: 685px;
+    position: absolute;
+    margin-left: 5px;
+    z-index: 2;
   }
 
   .graphic-example__after-photo-cat {
+    clip: rect(0, 710px, 518px, 349px);
     height: 518px;
     width: 710px;
-    position: relative;
-    left: 100%;
-    transform: translateX(-50%) rotateY(180deg);
+    margin-left: 6px;
+    z-index: 1;
   }
 
   .graphic-example__wrap {
@@ -183,40 +161,42 @@
     border-radius: 3px;
     height: 6px;
     width: 75.44%;//430px
+  }
 
-    &::before,
-    &::after {
-      border-radius: 50%;
-      cursor: pointer;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .graphic-example__slider {
+    background-color: #ffffff;
+    border: 1px solid $gray-300;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    left: 50%;
+    right: auto;
+    height: 32px;
+    width: 32px;
+    transform: translateX(-50%);
+    transition: none;
 
     &::before {
-      background-color: #ffffff;
-      border: 1px solid $gray-300;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-      right: auto;
-      width: 32px;
-      height: 32px;
+      background-color: $green;
+      border-radius: 50%;
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 8px;
+      width: 8px;
+      transform: translate(-50%, -50%);
     }
 
-    &:hover::before {
+    &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &:active::before {
+    &:active {
       border-color: $green;
       border-width: 2px;
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $green;
-      width: 8px;
-      height: 8px;
     }
   }
 
@@ -265,20 +245,14 @@
     padding-bottom: 10px;
   }
 
-  .graphic-example__before-photo-cat-wrap {
-    width: 53.2%;
-  }
-
   .graphic-example__before-photo-cat {
-    transform: translateX(-53%);
+    clip: rect(0, 366px, 685px, 0);
     width: 690px;
-  }
-
-  .graphic-example__after-photo-cat-wrap {
-    width: 46.8%;
+    margin-left: 0;
   }
 
   .graphic-example__after-photo-cat {
-    transform: translateX(-47%) rotateY(180deg);
+    clip: rect(0, 710px, 518px, 376px);
+    margin-left: 0;
   }
 }
