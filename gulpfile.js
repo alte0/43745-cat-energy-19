@@ -138,7 +138,7 @@ gulp.task("html", function () {
     .pipe(posthtml(plugins, options))
     .pipe(gulpif(isProd, gulp.dest(paths.build.html)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.html)))
-    .pipe(validate())
+    .pipe(gulpif(!isProd, validate()))
     .pipe(server.stream());
 });
 
