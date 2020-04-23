@@ -25,6 +25,7 @@ var buffer = require('vinyl-buffer');
 var validate = require('gulp-html-validate');
 var ghpages = require('gh-pages');
 var svgmin = require('gulp-svgmin');
+var htmlmin = require('gulp-htmlmin');
 var env = process.env.NODE_ENV || "dev";
 var isProd = env === "prod" ? true : false;
 var paths = {
@@ -137,6 +138,7 @@ gulp.task("html", function () {
     .pipe(plumber())
     .pipe(tap((file) => (path = file.path)))
     .pipe(posthtml(plugins, options))
+    .pipe(gulpif(isProd, htmlmin({ collapseWhitespace: true })))
     .pipe(gulpif(isProd, gulp.dest(paths.build.html)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.html)))
     .pipe(gulpif(!isProd, validate()))
@@ -189,8 +191,6 @@ gulp.task("spriteSvg", function () {
         pretty: true
       }
     }))
-    // .pipe(gulpif(isProd, gulp.dest(paths.build.svg)))
-    // .pipe(gulpif(!isProd, gulp.dest(paths.dest.svg)))
     .pipe(gulp.dest(paths.dest.svg))
     .pipe(server.stream());
 });
