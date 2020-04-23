@@ -24,6 +24,7 @@ var spritesmith = require('gulp.spritesmith');
 var buffer = require('vinyl-buffer');
 var validate = require('gulp-html-validate');
 var ghpages = require('gh-pages');
+var svgmin = require('gulp-svgmin');
 var env = process.env.NODE_ENV || "dev";
 var isProd = env === "prod" ? true : false;
 var paths = {
@@ -122,7 +123,7 @@ gulp.task("html", function () {
   var configBeautify = {
     rules: {
       indent: 2,
-      blankLines: false,
+      blankLines: false
     },
   };
 
@@ -183,6 +184,11 @@ gulp.task("spriteSvg", function () {
   return gulp.src(paths.src.svg)
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
     .pipe(gulpif(isProd, gulp.dest(paths.build.svg)))
     .pipe(gulpif(!isProd, gulp.dest(paths.dest.svg)))
     .pipe(server.stream());
