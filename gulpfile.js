@@ -247,5 +247,5 @@ gulp.task("server", function () {
 
 gulp.task("first", gulp.series("spriteSvg", "spritePng", "cWebp", "css", "js", "html"));
 gulp.task("start", gulp.series(gulp.parallel("delTempDev", "delWebp"), "first", "server"));
-gulp.task("prod", gulp.series("delBuild", "first", "copyFonts", "copyImgs"));
+gulp.task("prod", gulp.series(gulp.parallel("delTempDev", "delWebp"),"delBuild", "first", "copyFonts", "copyImgs"));
 ghpages.publish("build");
