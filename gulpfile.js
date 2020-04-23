@@ -189,8 +189,9 @@ gulp.task("spriteSvg", function () {
         pretty: true
       }
     }))
-    .pipe(gulpif(isProd, gulp.dest(paths.build.svg)))
-    .pipe(gulpif(!isProd, gulp.dest(paths.dest.svg)))
+    // .pipe(gulpif(isProd, gulp.dest(paths.build.svg)))
+    // .pipe(gulpif(!isProd, gulp.dest(paths.dest.svg)))
+    .pipe(gulp.dest(paths.dest.svg))
     .pipe(server.stream());
 });
 
