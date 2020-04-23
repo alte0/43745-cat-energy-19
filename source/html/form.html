@@ -4,6 +4,7 @@
 <include src="head.html" locals='{"text": "Подбор программы"}'></include>
 
 <body>
+  <include src="svg.html"></include>
   <header class="header header_open">
     <div class="container header__container">
       <a class="header__link-to-home" href="index.html">
@@ -74,14 +75,14 @@
                 <span class="field-data__span">E-mail:*</span>
                 <input class="field-data__input" name="email" type="email" placeholder="kuklachev@gmail.com" required="required">
                 <svg class="field-data__icon-email" height="20" width="20">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  <use xlink:href="#icon-mail"></use>
                 </svg>
               </label>
               <label class="field-data assortment-program__label">
                 <span class="field-data__span">Телефон:*</span>
                 <input class="field-data__input" name="tel" type="tel" placeholder="8 (960) 900-60-90" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="required">
                   <svg class="field-data__icon-tel" height="20" width="20">
-                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    <use xlink:href="#icon-phone"></use>
                   </svg>
               </label>
             </div>
