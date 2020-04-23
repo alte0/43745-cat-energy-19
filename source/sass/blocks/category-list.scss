@@ -54,7 +54,8 @@
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
   position: relative;
-  padding-right: 39px;
+  // padding-right: 39px;
+  padding-right: 48px;
 
   &:active {
     opacity: 0.3;
@@ -77,7 +78,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 2px;
+  right: 11px;
   margin: auto;
 }
 
