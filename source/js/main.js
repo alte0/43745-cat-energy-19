@@ -201,7 +201,7 @@ function ready() {
   svg4everybody();
 
   window.onresize = function () {
-    widthWindow = window.screen.width;
+    widthWindow = window.innerWidth;
     if (graphic) {
       initApp(store);
     }
