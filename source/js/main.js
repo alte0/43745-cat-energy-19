@@ -12,7 +12,7 @@ function ready() {
   var imgBefore = document.querySelector(".graphic-example__before-photo-cat");
   var slider = document.querySelector(".graphic-example__slider");
   var sideBtnMobile = "left";
-  var widthWindow = null || window.screen.width;
+  var widthWindow = null || getWindowInnerWidth();
   var TABLET = 768;
   var store = {
     init: true,
@@ -22,6 +22,10 @@ function ready() {
     photoAfter: null,
     w: null,
     bar: null
+  }
+
+  function getWindowInnerWidth() {
+    return window.innerWidth;
   }
 
   function handerClickToggle() {
@@ -126,11 +130,9 @@ function ready() {
   }
 
   function initApp(store) {
-    var width = window.screen.width;
-    var mobile = width < 768;
-    var tablet = width >= 768;
+    var mobile = widthWindow < 768;
+    var tablet = widthWindow >= 768;
     removeClassGraphic();
-
 
     function setInit() {
       store.init = !store.init;
@@ -143,7 +145,7 @@ function ready() {
       var percent = (store.w / 2 / store.w * 100);
       store.photoAfter = imgAfter;
       store.photoBefore = imgBefore;
-      store.photoBefore.style.clip = "rect(0, " + Math.floor(685 / 2 - correctPhotoBefore(width)) + "px, 685px, 0)";
+      store.photoBefore.style.clip = "rect(0, " + Math.floor(685 / 2 - correctPhotoBefore(widthWindow)) + "px, 685px, 0)";
       store.photoAfter.style.clip = "rect(0, 710px, 518px, " + Math.floor(710 / 2 - correctPhotoAfter(widthWindow)) + "px)";
       store.slider = slider;
       store.slider.style.left = percent + "%";
@@ -201,7 +203,8 @@ function ready() {
   svg4everybody();
 
   window.onresize = function () {
-    widthWindow = window.screen.width;
+    widthWindow = getWindowInnerWidth();
+
     if (graphic) {
       initApp(store);
     }

@@ -13,6 +13,7 @@
     "gulp": "4.0.x",
     "gulp-csso": "4.0.1",
     "gulp-html-validate": "git+https://github.com/alte0/gulp-html-validate.git",
+    "gulp-htmlmin": "5.0.1",
     "gulp-if": "3.0.0",
     "gulp-imagemin": "7.0.0",
     "gulp-js-import": "1.0.6",
