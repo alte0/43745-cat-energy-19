@@ -52,8 +52,40 @@
   resize: none;
   min-height: 150px;
   width: 100%;
+  color: $black444;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
 
-  &::placeholder {
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: 16px;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: 16px;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: $black444;
+    font-size: 16px;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &::-ms-input-placeholder {
     opacity: 1;
     color: $black444;
     font-size: 16px;
@@ -139,7 +171,17 @@
     min-height: 176px;
     padding: 12px 17px;
 
-    &::placeholder {
+    &::-moz-placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &::-webkit-input-placeholder {
       font-size: 20px;
       line-height: 30px;
     }
