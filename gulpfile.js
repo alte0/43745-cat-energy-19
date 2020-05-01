@@ -15,7 +15,7 @@ var beautify = require("posthtml-beautify");
 var csso = require('gulp-csso');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
-var jsImport = require('gulp-js-import');
+var gulpInclude = require("gulp-include");
 var rename = require("gulp-rename");
 var webp = require('gulp-webp');
 var imagemin = require('gulp-imagemin');
@@ -26,6 +26,7 @@ var validate = require('gulp-html-validate');
 var ghpages = require('gh-pages');
 var svgmin = require('gulp-svgmin');
 var htmlmin = require('gulp-htmlmin');
+var gulp4HhPages = require('gulp4-gh-pages');
 var env = process.env.NODE_ENV || "dev";
 var isProd = env === "prod" ? true : false;
 var paths = {
@@ -148,7 +149,7 @@ gulp.task("html", function () {
 gulp.task("js", function () {
   return gulp.src(paths.src.js)
     .pipe(plumber())
-    .pipe(jsImport())
+    .pipe(gulpInclude())
     .pipe(rename("script.js"))
     .pipe(sourcemap.init())
     .pipe(gulpif(isProd, uglify()))
@@ -249,4 +250,4 @@ gulp.task("server", function () {
 gulp.task("first", gulp.series("spriteSvg", "spritePng", "cWebp", "css", "js", "html"));
 gulp.task("start", gulp.series(gulp.parallel("delTempDev", "delWebp"), "first", "server"));
 gulp.task("prod", gulp.series(gulp.parallel("delTempDev", "delWebp"),"delBuild", "first", "copyFonts", "copyImgs"));
-ghpages.publish("build");
+gulp.task("deploy", gulp.series("prod", (cb) => gulp.src('./build/**/*').pipe(gulp4HhPages())));

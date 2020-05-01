@@ -1,5 +1,7 @@
-@import '../../node_modules/svg4everybody/dist/svg4everybody.js'
-@import '../../node_modules/picturefill/dist/picturefill.js'
+
+
+//=require ../../node_modules/svg4everybody/dist/svg4everybody.js
+//=require ../../node_modules/picturefill/dist/picturefill.js
 
 function ready() {
   var header = document.querySelector(".header");

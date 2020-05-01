@@ -16,7 +16,7 @@
     "gulp-htmlmin": "5.0.1",
     "gulp-if": "3.0.0",
     "gulp-imagemin": "7.0.0",
-    "gulp-js-import": "1.0.6",
+    "gulp-include": "^2.4.1",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-posthtml": "3.0.4",
@@ -29,6 +29,7 @@
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
     "gulp.spritesmith": "6.11.0",
+    "gulp4-gh-pages": "^0.6.0-6",
     "posthtml-beautify": "0.3.1",
     "posthtml-include": "1.4.3",
     "stylelint": "10.1.x",
@@ -40,6 +41,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "cross-env NODE_ENV=prod npx gulp prod",
+    "deploy": "cross-env NODE_ENV=prod npx gulp deploy",
     "start": "cross-env NODE_ENV=dev npx gulp start"
   },
   "browserslist": [
